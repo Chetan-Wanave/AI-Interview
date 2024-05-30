@@ -1,13 +1,13 @@
 //require('dotenv').config();
 const {Configuration, OpenAIApi}=require('openai');
 const configuration=new Configuration({
-    apiKey: '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'
+    apiKey:  'sk-proj-zrlx47tMXlrFx7ubKDayT3BlbkFJngvAcW7ekMEd0wailQ1Z'
 });
 const openai=new OpenAIApi(configuration);
 
 async function run(q) {
     const completion=await openai.createCompletion({
-       model:"text-davinci-003",
+       model:"gpt-3.5-turbo-instruct",
        prompt:q,
        top_p: 1,
        frequency_penalty: 0,
